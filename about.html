@@ -69,7 +69,7 @@
       
       <p style="margin-bottom:var(--sp-4)">We are a team of working photographers, cinematographers, and colorists who test gear in real-world scenarios. We care about rolling shutter, dynamic range usability, skin tones, and reliability when the temperature drops.</p>
 
-      <h3 style="text-align:left; margin-top:var(--sp-6)">The Team (Demo)</h3>
+      <h3 style="text-align:center; margin-top:var(--sp-6)">The Team (Demo)</h3>
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:var(--sp-4); margin-top:var(--sp-4)">
         <div style="text-align:center">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop" alt="John Doe" style="border-radius:50%; width:120px; height:120px; object-fit:cover; margin:0 auto var(--sp-2) auto">
@@ -111,7 +111,7 @@
       
       <hr style="border:0; border-top:1px solid var(--c-border); margin:var(--sp-6) 0">
       
-      <h3 style="text-align:left">Editorial Independence & Affiliate Disclosure</h3>
+      <h3 style="text-align:center">Editorial Independence & Affiliate Disclosure</h3>
       <p style="font-size:0.95rem; color:var(--c-text-muted)">Frameline maintains strict editorial independence. We do not accept payment for reviews, and manufacturers have no say in our scores. <em>Disclosure:</em> We may earn a commission when you click "Check price" and purchase via our affiliate links. This comes at no additional cost to you and helps fund our testing lab. Note: Frameline is a demo brand, and all products/scores shown are placeholder data.</p>
     </div>
   </section>
@@ -121,8 +121,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Frameline</h4>
-        <p style="color:var(--c-text-muted); font-size:0.875rem">Your independent guide to photography and cinematic gear.</p>
+        <a href="index.html" class="logo" style="margin-bottom:var(--sp-2)">Frame<span>line</span></a>
+        <p style="color:var(--c-text-muted); font-size:0.9rem; max-width:280px">Your independent guide to photography and cinematic gear.</p>
         <div class="footer-social">
           <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
           <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
@@ -151,12 +151,15 @@
       </div>
       <div class="footer-col">
         <h4>Stay Updated</h4>
-        <form style="display:flex; gap:8px" data-validate="true">
-          <input type="email" placeholder="Email address" required class="form-control" style="background:#1a1a1a; border-color:#333; height:40px; margin:0">
-          <button type="submit" class="btn btn-primary" style="height:40px; padding:0 var(--sp-2)">Join</button>
+        <p style="color:var(--c-text-muted); font-size:0.9rem">Monthly lab results. No spam.</p>
+        <form class="newsletter" data-validate="true">
+          <input type="email" placeholder="you@studio.com" required class="form-control" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Join</button>
+          <!-- Mailchimp embed code comment -->
         </form>
       </div>
     </div>
+    <div class="footer-brand" aria-hidden="true">Frameline</div>
     <div class="footer-bottom">
       <p>&copy; 2026 Frameline. All rights reserved.</p>
       <p class="disclosure">Some links may be affiliate links. Reviews are independent. Frameline is a demo brand. Prices, specs, and scores are placeholder data.</p>

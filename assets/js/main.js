@@ -4,7 +4,40 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initReveal();
   initCardSpotlight();
+  initActiveNav();
+  initBackToTop();
 });
+
+// Highlight the current page in the desktop nav and the mobile drawer
+function initActiveNav() {
+  const page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const current = page === 'camera-detail.html' ? 'cameras.html' : page;
+  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+    const target = (link.getAttribute('href') || '').split(/[?#]/)[0].toLowerCase();
+    const isActive = target === current;
+    link.classList.toggle('active', isActive);
+    if (isActive) link.setAttribute('aria-current', 'page');
+  });
+  if (current === 'cameras.html') {
+    document.querySelectorAll('.mobile-dropdown-btn').forEach(btn => btn.classList.add('active'));
+  }
+}
+
+function initBackToTop() {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<i class="ph ph-arrow-up"></i>';
+  document.body.appendChild(btn);
+  const update = () => btn.classList.toggle('show', window.scrollY > 400);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  btn.addEventListener('click', () => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+}
 
 function initNavScroll() {
   const nav = document.querySelector('.navbar');
