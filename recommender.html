@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use-Case Recommender | Frameline</title>
+  <meta name="description" content="Find the perfect camera for your specific needs using our advanced recommender engine.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">Frame<span>line</span></a>
+    <nav class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+      <div class="nav-item">
+        <a href="cameras.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Cameras <i class="ph ph-caret-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="cameras.html?type=mirrorless" class="dropdown-item">Mirrorless</a>
+          <a href="cameras.html?type=dslr" class="dropdown-item">DSLR</a>
+          <a href="cameras.html?type=action" class="dropdown-item">Action</a>
+          <a href="cameras.html?type=cinema" class="dropdown-item">Cinema</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="lenses.html" class="nav-link">Lenses</a></div>
+      <div class="nav-item"><a href="recommender.html" class="nav-link active">Recommender</a></div>
+      <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+      <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    </nav>
+    <div class="nav-cta"><a href="compare.html" class="btn btn-primary nav-compare">Compare</a></div>
+    <button class="hamburger" aria-label="Open Menu" aria-expanded="false"><i class="ph ph-list"></i></button>
+  </div>
+</header>
+
+<div class="mobile-overlay"></div>
+<div class="mobile-drawer">
+  <button class="close-btn" aria-label="Close Menu"><i class="ph ph-x"></i></button>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <div>
+      <button class="mobile-dropdown-btn" aria-expanded="false">Cameras <i class="ph ph-caret-down"></i></button>
+      <div class="mobile-dropdown-menu">
+        <a href="cameras.html?type=mirrorless" class="mobile-dropdown-item">Mirrorless</a>
+        <a href="cameras.html?type=dslr" class="mobile-dropdown-item">DSLR</a>
+        <a href="cameras.html?type=action" class="mobile-dropdown-item">Action</a>
+        <a href="cameras.html?type=cinema" class="mobile-dropdown-item">Cinema</a>
+      </div>
+    </div>
+    <a href="lenses.html" class="mobile-nav-link">Lenses</a>
+    <a href="recommender.html" class="mobile-nav-link">Recommender</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="compare.html" class="btn btn-secondary mobile-nav-btn">Compare</a>
+  </div>
+</div>
+
+<main style="padding-top:100px; padding-bottom:var(--sp-12);">
+  <section class="container" style="padding-top:var(--sp-6)">
+    <h1>Find Your Match</h1>
+    <p class="subtext">Tell us what you shoot and your budget. We'll crunch the numbers and recommend the best gear for your needs.</p>
+    
+    <div class="rec-layout">
+      
+      <div class="rec-panel">
+        <form id="recommender-form" data-validate="true">
+          <div class="form-group">
+            <label class="form-label">Primary Use Case</label>
+            <div class="rec-options">
+              <label class="rec-option"><input type="radio" name="useCase" value="portrait" required> <span>Portrait Photography</span></label>
+              <label class="rec-option"><input type="radio" name="useCase" value="travel"> <span>Travel & Street</span></label>
+              <label class="rec-option"><input type="radio" name="useCase" value="vlog"> <span>Vlogging & Content Creation</span></label>
+              <label class="rec-option"><input type="radio" name="useCase" value="film"> <span>Independent Filmmaking</span></label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="budget">Maximum Budget ($)</label>
+            <input type="number" id="budget" name="budget" class="form-control" placeholder="e.g., 2000" min="100" max="20000" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Priorities (1-10)</label>
+            <div class="rec-slider">
+              <label>Low-light Performance</label>
+              <input type="range" min="1" max="10" value="5" aria-label="Low-light Performance">
+            </div>
+            <div class="rec-slider">
+              <label>Video Quality</label>
+              <input type="range" min="1" max="10" value="5" aria-label="Video Quality">
+            </div>
+            <div class="rec-slider">
+              <label>Size and Weight (Portability)</label>
+              <input type="range" min="1" max="10" value="5" aria-label="Size and Weight">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:var(--sp-2)">Get Recommendations</button>
+        </form>
+      </div>
+      
+      <div id="recommender-results">
+        <div class="rec-empty">
+          <i class="ph ph-magnifying-glass" style="font-size:3rem; margin-bottom:var(--sp-2)"></i>
+          <h3 style="margin:0">Awaiting your criteria</h3>
+          <p style="text-align:center">Fill out the form to see your customized matches.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section class="container" style="padding-top:var(--sp-6)">
+    <h2>Weighting Table</h2>
+    <p class="subtext" style="margin-bottom:var(--sp-4)">We believe in transparency. Here's a simplified look at how our algorithm scores cameras based on your inputs.</p>
+    <div class="matrix-container">
+      <table class="matrix-table" style="min-width:600px">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Weight / Impact</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Use Case Match</td>
+            <td>+50 points</td>
+            <td>Camera's designed intent aligns perfectly with your selection.</td>
+          </tr>
+          <tr>
+            <td>Budget Fit</td>
+            <td>+30 points</td>
+            <td>Price is below or exactly meets your maximum budget.</td>
+          </tr>
+          <tr>
+            <td>Over Budget Penalty</td>
+            <td>-50 points</td>
+            <td>Heavily penalizes recommendations that exceed your budget constraint.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Frameline</h4>
+        <p style="color:var(--c-text-muted); font-size:0.875rem">Your independent guide to photography and cinematic gear.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Gear</h4>
+        <ul>
+          <li><a href="cameras.html">Cameras</a></li>
+          <li><a href="lenses.html">Lenses</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="recommender.html">Recommender</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#methodology">How we test</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <form style="display:flex; gap:8px" data-validate="true">
+          <input type="email" placeholder="Email address" required class="form-control" style="background:#1a1a1a; border-color:#333; height:40px; margin:0">
+          <button type="submit" class="btn btn-primary" style="height:40px; padding:0 var(--sp-2)">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Frameline. All rights reserved.</p>
+      <p class="disclosure">Some links may be affiliate links. Reviews are independent. Frameline is a demo brand. Prices, specs, and scores are placeholder data.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/recommender.js"></script>
+</body>
+</html>

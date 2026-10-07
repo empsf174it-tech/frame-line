@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Video Comparison & Review Guide | Frameline</title>
+  <meta name="description" content="Discover the best photography and video gear with our in-depth comparisons, verified user reviews, and comprehensive specs.">
+  <meta name="theme-color" content="#08080A">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- GA_TAG -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Lumia R9 Cinema",
+          "url": "https://example.com/camera-detail.html?id=lumia-r9"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Aero X5 Mirrorless",
+          "url": "https://example.com/camera-detail.html?id=aero-x5"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="home">
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">Frame<span>line</span></a>
+    <nav class="nav-links">
+      <div class="nav-item"><a href="index.html" class="nav-link active">Home</a></div>
+      <div class="nav-item">
+        <a href="cameras.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Cameras <i class="ph ph-caret-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="cameras.html?type=mirrorless" class="dropdown-item">Mirrorless</a>
+          <a href="cameras.html?type=dslr" class="dropdown-item">DSLR</a>
+          <a href="cameras.html?type=action" class="dropdown-item">Action</a>
+          <a href="cameras.html?type=cinema" class="dropdown-item">Cinema</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="lenses.html" class="nav-link">Lenses</a></div>
+      <div class="nav-item"><a href="recommender.html" class="nav-link">Recommender</a></div>
+      <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+      <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+    </nav>
+    <div class="nav-cta"><a href="compare.html" class="btn btn-primary nav-compare">Compare</a></div>
+    <button class="hamburger" aria-label="Open Menu" aria-expanded="false"><i class="ph ph-list"></i></button>
+  </div>
+</header>
+
+<div class="mobile-overlay"></div>
+<div class="mobile-drawer">
+  <button class="close-btn" aria-label="Close Menu"><i class="ph ph-x"></i></button>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <div>
+      <button class="mobile-dropdown-btn" aria-expanded="false">Cameras <i class="ph ph-caret-down"></i></button>
+      <div class="mobile-dropdown-menu">
+        <a href="cameras.html?type=mirrorless" class="mobile-dropdown-item">Mirrorless</a>
+        <a href="cameras.html?type=dslr" class="mobile-dropdown-item">DSLR</a>
+        <a href="cameras.html?type=action" class="mobile-dropdown-item">Action</a>
+        <a href="cameras.html?type=cinema" class="mobile-dropdown-item">Cinema</a>
+      </div>
+    </div>
+    <a href="lenses.html" class="mobile-nav-link">Lenses</a>
+    <a href="recommender.html" class="mobile-nav-link">Recommender</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="compare.html" class="btn btn-secondary mobile-nav-btn">Compare</a>
+  </div>
+</div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="home-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge animate-up"><b>New</b> 2026 Cinema Camera Lab results are live</div>
+        <h1 class="hero-title animate-up delay-1">See every frame <span class="serif text-gradient">before</span> you buy.</h1>
+        <p class="hero-lead animate-up delay-2">The independent guide to photography and cinema gear. Lab-measured specs, verified owner reviews and side-by-side comparisons — without the noise.</p>
+        <div class="hero-actions animate-up delay-3">
+          <a href="recommender.html" class="btn btn-primary">Find my camera <i class="ph ph-arrow-right"></i></a>
+          <a href="#exposure-lab" class="btn btn-secondary"><i class="ph ph-aperture"></i> Try the Exposure Lab</a>
+        </div>
+        <div class="hero-stats animate-up delay-4">
+          <div><strong class="tabular" data-count="128">0</strong><span>Cameras lab-tested</span></div>
+          <div><strong class="tabular" data-count="4800" data-suffix="+">0</strong><span>Hours of field use</span></div>
+          <div><strong class="tabular" data-count="38" data-suffix="k">0</strong><span>Verified reviews</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual animate-up delay-2">
+        <div class="viewfinder" id="hero-viewfinder">
+          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?q=80&w=1400&auto=format&fit=crop" alt="Camera on a desk in warm light">
+          <div class="vf-ui" aria-hidden="true">
+            <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+            <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+            <div class="vf-top"><span class="vf-rec">REC 00:12:48</span><span>8K · 24P · L-LOG3</span></div>
+            <div class="vf-focus"></div>
+            <div class="vf-bottom"><span>1/50</span><span>f/1.8</span><span>ISO 800</span><span>5600K</span></div>
+          </div>
+        </div>
+        <div class="float-chip c1">
+          <i class="ph-fill ph-star"></i>
+          <div><small>Editor's pick</small><strong>Lumia R9 · 4.8</strong></div>
+        </div>
+        <div class="float-chip c2">
+          <i class="ph ph-gauge"></i>
+          <div><small>Dynamic range</small><strong class="tabular">14.8 stops</strong></div>
+        </div>
+      </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <!-- ============ BRAND MARQUEE ============ -->
+  <div class="marquee" aria-label="Brands we test">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Lumia</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Aero</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Vertex</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Kinesis</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Halden Optics</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Northlight</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Obscura</span>
+      <span class="marquee-item"><i class="ph-fill ph-asterisk"></i> Meridian</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Lumia</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Aero</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Vertex</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Kinesis</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Halden Optics</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Northlight</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Obscura</span>
+      <span class="marquee-item" aria-hidden="true"><i class="ph-fill ph-asterisk"></i> Meridian</span>
+    </div>
+  </div>
+
+  <!-- ============ USE CASES ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Shop by use case</span>
+        <h2>Start with <span class="serif">how</span> you shoot.</h2>
+        <p class="subtext">Jump straight into the recommender, pre-tuned for your style.</p>
+      </div>
+      <div class="bento">
+        <a href="recommender.html?useCase=portrait" class="bento-tile wide tall reveal">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy">
+          <span class="tile-arrow"><i class="ph ph-arrow-right"></i></span>
+          <span class="bento-tag">Eye AF · Fast primes</span>
+          <h3>Portrait</h3>
+          <p>Skin tones, creamy bokeh and autofocus that never loses the eye.</p>
+        </a>
+        <a href="recommender.html?useCase=travel" class="bento-tile wide reveal" style="--d:.08s">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy">
+          <span class="tile-arrow"><i class="ph ph-arrow-right"></i></span>
+          <span class="bento-tag">Under 600g</span>
+          <h3>Travel</h3>
+          <p>Light bodies, long batteries, weather sealing.</p>
+        </a>
+        <a href="recommender.html?useCase=vlog" class="bento-tile reveal" style="--d:.16s">
+          <img src="https://images.unsplash.com/photo-1571190144364-1da84d9ca448?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+          <span class="tile-arrow"><i class="ph ph-arrow-right"></i></span>
+          <span class="bento-tag">Flip screens</span>
+          <h3>Vlog</h3>
+        </a>
+        <a href="recommender.html?useCase=film" class="bento-tile reveal" style="--d:.24s">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop" alt="" loading="lazy">
+          <span class="tile-arrow"><i class="ph ph-arrow-right"></i></span>
+          <span class="bento-tag">RAW · 10-bit</span>
+          <h3>Film</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERACTIVE: EXPOSURE LAB ============ -->
+  <section class="lab" id="exposure-lab">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Interactive · Exposure Lab</span>
+        <h2>Feel the exposure <span class="serif text-gradient">triangle.</span></h2>
+        <p class="subtext">Drag aperture, shutter speed and ISO and watch depth of field, motion blur and grain change live — then see which camera handles it best.</p>
+      </div>
+
+      <div class="lab-shell reveal">
+        <div class="lab-frame">
+          <div class="lab-scene" id="lab-scene">
+            <img class="lab-bg" id="lab-bg" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop" alt="Portrait preview reacting to your exposure settings">
+            <img class="lab-fg" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop" alt="" aria-hidden="true">
+          </div>
+          <div class="lab-noise" id="lab-noise"></div>
+          <div class="lab-hud" aria-hidden="true">
+            <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+            <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+            <span class="lab-clip" id="lab-clip">CLIPPING</span>
+            <div class="lab-readout">
+              <span>f/<b id="ro-ap">2.8</b></span>
+              <span><b id="ro-sh">1/125</b>s</span>
+              <span>ISO <b id="ro-iso">100</b></span>
+              <span>EV <b id="ro-ev">0.0</b></span>
+            </div>
+          </div>
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <filter id="motion-blur" x="-10%" y="0" width="120%" height="100%">
+              <feGaussianBlur id="motion-blur-node" in="SourceGraphic" stdDeviation="0 0"/>
+            </filter>
+          </svg>
+        </div>
+
+        <div class="lab-controls">
+          <div class="lab-presets" role="group" aria-label="Scene presets">
+            <button class="chip" data-preset="portrait" aria-pressed="false"><i class="ph ph-user-focus"></i> Portrait</button>
+            <button class="chip" data-preset="landscape" aria-pressed="false"><i class="ph ph-mountains"></i> Landscape</button>
+            <button class="chip" data-preset="action" aria-pressed="false"><i class="ph ph-lightning"></i> Action</button>
+            <button class="chip" data-preset="motion" aria-pressed="false"><i class="ph ph-wind"></i> Motion trail</button>
+          </div>
+
+          <div class="dial">
+            <div class="dial-head"><label for="ap">Aperture</label><span class="dial-value tabular" id="ap-val">f/2.8</span></div>
+            <input type="range" class="range" id="ap" min="0" max="7" step="1" value="2">
+            <div class="range-ticks"><span>f/1.4</span><span>f/4</span><span>f/16</span></div>
+            <p class="dial-hint" id="ap-hint">Moderate background blur.</p>
+          </div>
+
+          <div class="dial">
+            <div class="dial-head"><label for="sh">Shutter</label><span class="dial-value tabular" id="sh-val">1/125</span></div>
+            <input type="range" class="range" id="sh" min="0" max="10" step="1" value="5">
+            <div class="range-ticks"><span>1/4000</span><span>1/250</span><span>1/4</span></div>
+            <p class="dial-hint" id="sh-hint">Freezes walking subjects.</p>
+          </div>
+
+          <div class="dial">
+            <div class="dial-head"><label for="iso">ISO</label><span class="dial-value tabular" id="iso-val">100</span></div>
+            <input type="range" class="range" id="iso" min="0" max="7" step="1" value="0">
+            <div class="range-ticks"><span>100</span><span>1600</span><span>12800</span></div>
+            <p class="dial-hint" id="iso-hint">Cleanest possible files.</p>
+          </div>
+
+          <div class="meter">
+            <div class="meter-scale" aria-hidden="true">
+              <span>-3</span><span>-2</span><span>-1</span><span>0</span><span>+1</span><span>+2</span><span>+3</span>
+              <span class="meter-needle" id="meter-needle"></span>
+            </div>
+            <p class="meter-status" id="meter-status" aria-live="polite">Balanced exposure <span>— nicely done.</span></p>
+          </div>
+
+          <div class="lab-tags" id="lab-tags"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERACTIVE: SPEC DUEL ============ -->
+  <section id="spec-duel">
+    <div class="container duel">
+      <div class="reveal">
+        <div class="section-head left" style="margin-bottom:var(--sp-5)">
+          <span class="eyebrow">Interactive · Spec Duel</span>
+          <h2>Two cameras. <span class="serif">One</span> glance.</h2>
+          <p class="subtext">Pick any two bodies and see how our lab scores stack up across image quality, video, autofocus, handling and value.</p>
+        </div>
+        <div class="duel-pickers">
+          <div class="duel-picker a" style="--swatch:var(--c-accent)"><span>Camera A</span><div class="chips" id="pick-a" role="group" aria-label="Camera A"></div></div>
+          <div class="duel-picker b" style="--swatch:#8FA8FF"><span>Camera B</span><div class="chips" id="pick-b" role="group" aria-label="Camera B"></div></div>
+        </div>
+        <table class="duel-table" id="duel-table" aria-live="polite"></table>
+        <div style="margin-top:var(--sp-4); display:flex; gap:12px; flex-wrap:wrap">
+          <a href="compare.html" class="btn btn-primary" id="duel-compare">Open full comparison <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="radar-wrap reveal" style="--d:.1s">
+        <div class="duel-score"><span id="duel-a-name">Camera A</span><strong class="tabular" id="duel-a-avg">0.0</strong></div>
+        <svg class="radar" id="radar" viewBox="-180 -170 360 340" role="img" aria-label="Radar chart comparing lab scores"></svg>
+        <div class="radar-legend">
+          <span style="--swatch:var(--c-accent)" id="legend-a">A</span>
+          <span style="--swatch:#8FA8FF" id="legend-b">B</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:var(--sp-3); max-width:none; text-align:left">
+        <div>
+          <span class="eyebrow">Featured</span>
+          <h2 style="text-align:left; margin:0">Top rated in the lab.</h2>
+        </div>
+        <a href="cameras.html" class="btn btn-secondary">View all cameras <i class="ph ph-arrow-right"></i></a>
+      </div>
+      <div class="product-grid" id="cameras-grid">
+        <article class="card product-card reveal">
+          <span class="product-badge">Editor's pick</span>
+          <div class="card-img-wrap"><a href="camera-detail.html?id=lumia-r9"><img src="https://images.unsplash.com/photo-1522054361367-64c3824dcebc?q=80&w=800&auto=format&fit=crop" alt="Lumia R9" loading="lazy"></a></div>
+          <div class="card-content">
+            <div class="card-meta"><span><i class="ph-fill ph-star" style="color:var(--c-accent)"></i> 4.8 · 124 reviews</span></div>
+            <h3 class="card-title"><a href="camera-detail.html?id=lumia-r9">Lumia R9 Cinema</a></h3>
+            <div class="card-row"><span class="card-price tabular">$3,499</span><a href="camera-detail.html?id=lumia-r9" class="icon-btn" aria-label="Read Lumia R9 review"><i class="ph ph-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="card product-card reveal" style="--d:.08s">
+          <span class="product-badge">Best value</span>
+          <div class="card-img-wrap"><a href="camera-detail.html?id=aero-x5"><img src="https://images.unsplash.com/photo-1607462109225-6b64ae2dd3cb?q=80&w=800&auto=format&fit=crop" alt="Aero X5" loading="lazy"></a></div>
+          <div class="card-content">
+            <div class="card-meta"><span><i class="ph-fill ph-star" style="color:var(--c-accent)"></i> 4.6 · 312 reviews</span></div>
+            <h3 class="card-title"><a href="camera-detail.html?id=aero-x5">Aero X5 Mirrorless</a></h3>
+            <div class="card-row"><span class="card-price tabular">$1,899</span><a href="camera-detail.html?id=aero-x5" class="icon-btn" aria-label="Read Aero X5 review"><i class="ph ph-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="card product-card reveal" style="--d:.16s">
+          <span class="product-badge">Best handling</span>
+          <div class="card-img-wrap"><a href="camera-detail.html?id=vertex-d8"><img src="https://images.unsplash.com/photo-1621520291095-aa6c7137f048?q=80&w=800&auto=format&fit=crop" alt="Vertex D8" loading="lazy"></a></div>
+          <div class="card-content">
+            <div class="card-meta"><span><i class="ph-fill ph-star" style="color:var(--c-accent)"></i> 4.7 · 205 reviews</span></div>
+            <h3 class="card-title"><a href="camera-detail.html?id=vertex-d8">Vertex D8 Pro</a></h3>
+            <div class="card-row"><span class="card-price tabular">$2,499</span><a href="camera-detail.html?id=vertex-d8" class="icon-btn" aria-label="Read Vertex D8 review"><i class="ph ph-arrow-right"></i></a></div>
+          </div>
+        </article>
+        <article class="card product-card reveal" style="--d:.24s">
+          <span class="product-badge">Best action</span>
+          <div class="card-img-wrap"><a href="camera-detail.html?id=kinesis-go"><img src="https://images.unsplash.com/photo-1571190144364-1da84d9ca448?q=80&w=800&auto=format&fit=crop" alt="Kinesis Go" loading="lazy"></a></div>
+          <div class="card-content">
+            <div class="card-meta"><span><i class="ph-fill ph-star" style="color:var(--c-accent)"></i> 4.5 · 850 reviews</span></div>
+            <h3 class="card-title"><a href="camera-detail.html?id=kinesis-go">Kinesis Action Go</a></h3>
+            <div class="card-row"><span class="card-price tabular">$399</span><a href="camera-detail.html?id=kinesis-go" class="icon-btn" aria-label="Read Kinesis Go review"><i class="ph ph-arrow-right"></i></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How we test</span>
+        <h2>Measured, not <span class="serif">marketed.</span></h2>
+        <p class="subtext">Every camera goes through the same four-stage editorial process before it earns a score.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><i class="ph ph-flask"></i><h3>Lab bench</h3><p>Dynamic range, noise and rolling shutter measured on calibrated charts.</p></div>
+        <div class="step reveal" style="--d:.08s"><i class="ph ph-crosshair"></i><h3>AF stress test</h3><p>Erratic subjects, low light and backlight to push tracking to its limit.</p></div>
+        <div class="step reveal" style="--d:.16s"><i class="ph ph-thermometer-hot"></i><h3>Thermal runs</h3><p>Continuous 4K/8K recording until the camera tells us to stop.</p></div>
+        <div class="step reveal" style="--d:.24s"><i class="ph ph-mountains"></i><h3>Field weeks</h3><p>Real shoots with working photographers before a verdict is written.</p></div>
+      </div>
+      <div style="text-align:center; margin-top:var(--sp-6)" class="reveal">
+        <a href="about.html#methodology" class="btn btn-secondary">Read our methodology <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow">60-second recommender</span>
+        <h2>Your next camera is <span class="serif text-gradient">three questions</span> away.</h2>
+        <p class="subtext">Tell us your budget, what you shoot and what matters most. We'll do the rest.</p>
+        <div class="hero-actions">
+          <a href="recommender.html" class="btn btn-primary">Start the recommender <i class="ph ph-arrow-right"></i></a>
+          <a href="compare.html" class="btn btn-secondary">Compare gear</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom:var(--sp-2)">Frame<span>line</span></a>
+        <p style="color:var(--c-text-muted); font-size:0.9rem; max-width:280px">Your independent guide to photography and cinematic gear.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+          <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Gear</h4>
+        <ul>
+          <li><a href="cameras.html">Cameras</a></li>
+          <li><a href="lenses.html">Lenses</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="recommender.html">Recommender</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#methodology">How we test</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p style="color:var(--c-text-muted); font-size:0.9rem">Monthly lab results. No spam.</p>
+        <form class="newsletter" data-validate="true">
+          <input type="email" placeholder="you@studio.com" required class="form-control" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Join</button>
+          <!-- Mailchimp embed code comment -->
+        </form>
+      </div>
+    </div>
+    <div class="footer-brand" aria-hidden="true">Frameline</div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Frameline. All rights reserved.</p>
+      <p class="disclosure">Some links may be affiliate links. Reviews are independent. Frameline is a demo brand. Prices, specs, and scores are placeholder data.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/forms.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
